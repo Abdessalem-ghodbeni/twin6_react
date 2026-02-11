@@ -10,7 +10,7 @@ export default class Commande extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("le composant a été mis à jour");
+    // console.log("le composant a été mis à jour");
   }
   render() {
     return (
