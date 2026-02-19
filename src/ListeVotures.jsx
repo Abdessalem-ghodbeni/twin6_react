@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Voiture from "./Voiture";
 import Commande from "./Commande";
 import { AppContext } from "./../AppContext";
+import Header from "./Header";
 
 function ListeVotures() {
   const [count, setCount] = useState(0);
@@ -18,21 +19,21 @@ function ListeVotures() {
       marque: "golf",
       modele: "Corolla",
       annee: 2020,
-      image: "assets/voiture/golf.jfif",
+      image: "/assets/voiture/golf.jfif",
     },
     {
       id: 2,
       marque: "bmw",
       modele: "Civic",
       annee: 2019,
-      image: "assets/voiture/bmww.jfif",
+      image: "/assets/voiture/bmww.jfif",
     },
     {
       id: 3,
       marque: "clio",
       modele: "clio",
       annee: 2018,
-      image: "assets/voiture/clio.jfif",
+      image: "/assets/voiture/clio.jfif",
     },
   ];
   const incrementer = () => {
@@ -65,6 +66,7 @@ function ListeVotures() {
 
   return (
     <>
+      <Header />
       <AppContext.Provider
         value={{
           count,

@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link, NavLink } from "react-router-dom";
+import "./Header.css";
 function Header() {
   return (
     <>
@@ -960,10 +961,25 @@ function Header() {
               </li>
               {/* Sign In button */}
               <li className="nav-item ms-2 d-none d-sm-block">
-                <a href="#" className="btn btn-sm btn-primary-soft mb-0">
+                <Link to="/liste/voitures">
                   <i className="fa-solid fa-right-to-bracket me-2" />
-                  Sign Up
-                </a>
+                  Liste Voiture
+                </Link>
+              </li>
+              <li className="nav-item ms-2 d-none d-sm-block">
+                <Link to="/signin">
+                  <i className="fa-solid fa-right-to-bracket me-2" />
+                  Sign In
+                </Link>
+              </li>
+              <li className="nav-item ms-2 d-none d-sm-block">
+                <NavLink
+                  to="/liste_produit"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <i className="fa-solid fa-right-to-bracket me-2" />
+                  Liste Produits
+                </NavLink>
               </li>
             </ul>
             {/* Navbar right side END */}

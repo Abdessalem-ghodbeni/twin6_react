@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../AppContext";
 import { useVoitureSpeciale } from "../useVoitureSpeciale";
+import { Link } from "react-router-dom";
 
 function Voiture({ voiture }) {
   const { color, background } = useContext(AppContext);
@@ -22,6 +23,10 @@ function Voiture({ voiture }) {
           <strong>{voiture.annee}</strong>
         </p>
         {messageSpecial && <p className="text-success">{messageSpecial}</p>}
+
+        <button className="btn btn-outline-info">
+          <Link to={`/voiture/by/${voiture.id}`}>Voir details</Link>
+        </button>
       </div>
     </>
   );

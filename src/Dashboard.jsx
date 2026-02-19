@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -92,9 +92,7 @@ function Dashboard() {
                   >
                     <li className="nav-item">
                       {" "}
-                      <a className="nav-link" href="admin-guest-list.html">
-                        Guest List
-                      </a>
+                      <Link to="/admin/liste/voitures">LISTE VOITURE</Link>
                     </li>
                     <li className="nav-item">
                       {" "}

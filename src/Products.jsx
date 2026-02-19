@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import Header from "./Header";
 
 function Products() {
   const listProduits = [
@@ -9,6 +10,7 @@ function Products() {
   ];
   return (
     <>
+      <Header />
       <h1> liste des produits</h1>
       <div className="row">
         {listProduits.map((produit) => (
